@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tetris AI</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+</head>
+<body>
+
+
+    <div id="fb-root"></div>
+    <div class="container">
+        <h1 class="header">Tetris AI</h1>
+        <div id="gameOverText" style="display: none;">
+            <div id="gameOverInstructions">
+                A LOGFILE_Game_<span id="logFileNumber">number</span>.txt<br>
+                has been created and downloaded<br>
+                (check your downloads folder)<br>
+                Please return to the questionnaire <br>
+                and upload the latest log file <br>
+                <br>
+                After uploading, go to the next page<br>
+                in the questionnaire for additional <br>
+                instructions
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="controls-container2">
+                <label for="playerName" id="playerIdField">Player ID:</label>
+                <div class="input-container">
+                    <input type="text" id="playerName">
+                    <button id="saveButton">Save</button>
+                </div>
+                <p class="text2">Secuirty level selecter: </p>
+                <div class="security-levels">
+                    <button class="security-level-btn" id="1">1</button>
+                    <button class="security-level-btn" id="2">2</button>
+                    <button class="security-level-btn" id="3">3</button>
+                    <button class="security-level-btn" id="4">4</button>
+                    <button class="security-level-btn" id="5">5</button>
+                    <button class="security-level-btn" id="6">6</button>
+                    <button class="security-level-btn" id="7">7</button>
+                </div>
+                <p class="small">(Secuirty levels can be changed at any time during play.)</p>
+                <!--         <table>
+                 <tr>
+                     <th>Security Level</th>
+                     <th>1</th>
+                     <th>2</th>
+                     <th>3</th>
+                     <th>4</th>
+                     <th>5</th>
+                     <th>6</th>
+                     <th>7</th>
+                 </tr>
+                 <tr>
+                     <td>True positives</td>
+                     <td><span class="fraction"><sup>31</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>50</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>69</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>84</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>93</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>98</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>99</sup><sub>100</sub></span></td>
+                 </tr>
+                 <tr>
+                     <td>False positives</td>
+                     <td><span class="fraction"><sup>1</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>2</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>7</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>15</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>31</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>50</sup><sub>100</sub></span></td>
+                     <td><span class="fraction"><sup>69</sup><sub>100</sub></span></td>
+                 </tr>
+             </table>-->
+            </div>
+            <div class="controls-container">
+                <div id="timer-container" class="timer-container">04:00.0</div>
+                <div id="score-container" class="score-container">0</div>
+                <div id="unlines-container" class="unlines-container">0</div>
+                <div id="next-container" class="next-container">
+                    <canvas id="next-canvas" class="next-canvas" width="80px" height="80px"></canvas>
+                </div>
+                <button id="reset-button" class="reset-button">Click to Collect Lines</button>
+            </div>
+            
+            
+            <canvas width="260px" height="400px" id="grid-canvas" class="grid"></canvas>
+            <div class="start-button-container">
+                <button id="startButton" class="start-button">Start Game</button>
+            </div>
+
+        </div>
+
+        <hr>
+    </div>
+
+    <script src="js/polyfill.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/piece.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/stopwatch.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/random_piece_generator.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/tuner.js"></script>
+    <script>
+        var manager = new GameManager();
+    </script>
+    <script src="js/size.js"></script>
+</body>
+</html>

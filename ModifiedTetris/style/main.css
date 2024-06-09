@@ -1,0 +1,404 @@
+body {
+    background-color: #FCFCFC;
+    transform: scale(3);
+    overflow: hidden;
+}
+
+a
+{
+    color: #0000FF;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    cursor: pointer
+}
+
+hr
+{
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+}
+
+.container
+{
+    width:630px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.header
+{
+    text-align: center;
+    font-family: Verdana;
+    color:#0000FF;
+}
+
+.game-container
+{
+    height:720px;
+    width:790px;
+    float:right
+}
+
+.grid
+{
+    float:left;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    border:1px solid #CCCCCC;
+}
+
+
+
+.controls-container2 {
+    float: left;
+    margin-right: 70px; 
+    margin-left: 24px;
+}
+
+
+.grid-canvas {
+    width: 260px;
+    float: left;
+    height: 100%;
+}
+
+.controls-container {
+    width: 130px;
+    float: right;
+    height: 100%;
+}
+
+.controls-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#gameOverText {
+    position: fixed;
+    top: calc(50% - 10vh);
+    left: calc(50% - 0.5vw);
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #000;
+    border-radius: 10px;
+    z-index: 1000;
+    pointer-events: none;
+    text-align: center;
+}
+
+#gameOverInstructions {
+    font-size: 0.8em;
+}
+
+
+.security-levels {
+    display: flex;
+    gap: 5px;
+}
+
+.security-level {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.security-level-btn {
+    background-color: #0ba31d;
+    border: none;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 30px;
+    padding: 10px 0;
+}
+
+.timer-container {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #0000FF;
+    font-size: 25px;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.timer-container::before {
+    content: "Time Left";
+    width: 100%;
+    float: right;
+    color: #BBBBBB;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.score-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #000000;
+    font-size:25px;
+    border:1px solid #CCCCCC;
+    font-weight: bold;
+    padding:5px;
+}
+
+.score-container::before
+{
+    content: "Lines Collected";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+.unlines-container {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #FF0000;
+    font-size: 25px;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.unlines-container::before {
+    content: "Un-Collected Lines";
+    width: 100%;
+    float: right;
+    color: #BBBBBB;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+
+.next-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #FF0000;
+    font-size:25px;
+    border:1px solid #CCCCCC;
+    font-weight: bold;
+    padding:5px;
+    margin-top: 10px;
+}
+
+.next-container::before
+{
+    content: "Next Piece";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+
+.reset-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 2px solid #cccccc;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    max-width: 130px;
+}
+
+.reset-button:not(:disabled):hover {
+        background-color: #e5e5e5;
+        border-color: #b3b3b3;
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+.reset-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.reset-button:disabled:hover {
+    background-color: #cccccc;
+    cursor: wait;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.start-ai-button:hover, .reset-button:hover {
+    background-color:#e9e9e9;
+}
+
+.start-ai-button:active, .reset-button:active {
+     position:relative;
+     top:1px;
+ }
+
+.start-ai-button{
+    margin-top: 15px;
+}
+
+.reset-button{
+    margin-top: 10px;
+}
+
+.footer
+{
+    font-family: Verdana;
+    color:#000000;
+    font-size: 12px;
+}
+
+.fb-like {
+    vertical-align: top;
+}
+.fb_iframe_widget span {
+    vertical-align: text-top !important;
+}
+
+.text2 {
+    margin: 0;
+    padding: 0;
+}
+
+.small {
+    margin: 0;
+    padding: 0;
+    font-size: 8px; /* Small text */
+    color: red; /* Red text */
+}
+
+.custom-confirm {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-confirm-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.fraction {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1;
+    margin: 0 1px;
+}
+
+.fraction sup, .fraction sub {
+    font-size: 13px;
+}
+
+.fraction sup {
+    display: block;
+}
+
+.fraction sub {
+    display: block;
+    border-top: 1px solid #000;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+#playerName {
+    margin-right: 2px;
+}
+
+
+.start-button-container {
+    text-align: center;
+    margin-top: 40px; /* Adjust this value to set the distance between the grid and the start button */
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 300px;
+}
+
+
+
+
+
+/*
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 485px; 
+    left: 570px;
+}
+    */
